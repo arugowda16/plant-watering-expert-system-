@@ -18,7 +18,11 @@ with st.form("inputs"):
         temperature_c = st.number_input("Temperature (°C)", min_value=-10.0, max_value=45.0, value=24.0, step=0.5)
         season = st.selectbox("Season", ["spring", "summer", "fall", "winter"])
 
-    backend_url = st.text_input("Backend URL", value="http://127.0.0.1:8000")
+    backend_url = st.text_input(
+    "Backend URL",
+    value="https://plant-watering-api.onrender.com"
+)
+
     submitted = st.form_submit_button("Get Recommendation")
 
 if submitted:
